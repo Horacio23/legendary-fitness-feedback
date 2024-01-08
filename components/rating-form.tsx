@@ -244,17 +244,14 @@ const RatingForm = () => {
                         </FormItem>
                     )}
                 />
-                <div className="pt-4">
-                    <h2 className="bold-16 uppercase text-lf-10 text-center pb-2">Your information</h2>
-                </div>
-                <div className="border-2 border-lf-30 rounded-md mx-8 mb-4 bg-lf-80">
+                <div className=" mx-8 mb-4 ">
                     <FormField 
                         control={form.control}
                         name="name"
                         render={({ field }) => (
-                            <div className="mx-6 pb-2 pt-4">
+                            <div className="pb-2 pt-4">
                                 <FormItem>
-                                    <FormLabel className="text-lf-10 bold-18">Name:</FormLabel>
+                                    <FormLabel className="text-lf-10 bold-18">Your Name:</FormLabel>
                                     <FormControl>
                                         <Input type="text" placeholder="" {...field} />
                                     </FormControl>
@@ -266,7 +263,7 @@ const RatingForm = () => {
                         control={form.control}
                         name="phone"
                         render={({ field }) => (
-                            <div className="mx-6 pb-2">
+                            <div className="pb-2">
                                 <FormItem>
                                     <FormLabel className="text-lf-10 bold-18">Phone:</FormLabel>
                                     <FormControl>
@@ -280,7 +277,7 @@ const RatingForm = () => {
                         control={form.control}
                         name="email"
                         render={({ field }) => (
-                            <div className="mx-6 pb-4">
+                            <div className="pb-4">
                                 <FormItem>
                                     <FormLabel className="text-lf-10 bold-18">Email:</FormLabel>
                                     <FormControl>
