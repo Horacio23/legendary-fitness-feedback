@@ -1,4 +1,5 @@
 import { db } from "@/lib/db"
+import { Feedback } from "@prisma/client"
 
 const getData = async (id:string, location: string) => {
     const feedback = await db.feedback.findUnique({
@@ -15,22 +16,23 @@ const ViewFeedbackPage = async ({
 }:{    
     params: {id: string, location: string} 
 }) => {
-    const {
-        name, 
-        phone, 
-        email, 
-        coachName, 
-        coachRating, 
-        suggestions, 
-        firstTime, 
-        workoutRating,
-        cleanlinessRating,
-        recommendationRating,
-        returnRating
-    } = await getData(params.id, params.location)
+    // const {
+    //     name, 
+    //     phone, 
+    //     email, 
+    //     coachName, 
+    //     coachRating, 
+    //     suggestions, 
+    //     firstTime, 
+    //     workoutRating,
+    //     cleanlinessRating,
+    //     recommendationRating,
+    //     returnRating
+    // } = await getData(params.id, params.location)
     return ( 
         <div className="text-white">
-            {name} {params.location}
+        {/* TODO: create indiviual feedback view*/}
+            <h1>Individual feedback page</h1>
         </div> 
     );
 }
