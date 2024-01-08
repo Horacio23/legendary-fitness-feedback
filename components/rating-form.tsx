@@ -115,7 +115,7 @@ const RatingForm = () => {
                     name="firstTime"
                     render={({ field }) => (
                         <FormItem>
-                            <div className="flex flex-col w-full px-8 items-center py-4">
+                            <div className="flex flex-col w-full px-8 items-center pb-4">
                                 <h1 className="bold-16 uppercase text-lf-10 text-center pb-2">Was today your first class at legendary?</h1>
                                 <div className="flex bg-white justify-between px-12 py-1 min-w-[320px] rounded-sm">
                                     <Button 
@@ -201,7 +201,7 @@ const RatingForm = () => {
                     render={({ field }) => (
                         <FormItem>
                             <FormControl>
-                                <div className="flex flex-col w-full px-8 items-center py-4">
+                                <div className="flex flex-col w-full px-8 items-center py-2">
                                     <h1 className="bold-16 uppercase text-lf-10 text-center pb-2">Who was your coach today?</h1>
                                     <div className="flex bg-white justify-between py-1 min-w-[320px] rounded-sm">
                                         <Input placeholder="" {...field} />
@@ -230,7 +230,7 @@ const RatingForm = () => {
                     render={({ field }) => (
                         <FormItem>
                             <FormControl>
-                                <div className="flex flex-col w-full px-8 items-center py-4">
+                                <div className="flex flex-col w-full px-8 items-center py-2">
                                     <h1 className="bold-16 uppercase text-lf-10 text-center pb-2">Please share your comments/suggestions with us!</h1>
                                     <div className="flex bg-white justify-between py-1 min-w-[320px] rounded-sm">
                                         <Textarea 
@@ -244,53 +244,58 @@ const RatingForm = () => {
                         </FormItem>
                     )}
                 />
-                <FormField 
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                        <div className="mx-8 pb-2">
-                            <FormItem>
-                                <FormLabel className="text-lf-10 bold-18">Name:</FormLabel>
-                                <FormControl>
-                                    <Input type="text" placeholder="" {...field} />
-                                </FormControl>
-                            </FormItem>
-                        </div>
-                    )}
-                />
-                <FormField 
-                    control={form.control}
-                    name="phone"
-                    render={({ field }) => (
-                        <div className="mx-8 pb-2">
-                            <FormItem>
-                                <FormLabel className="text-lf-10 bold-18">Phone:</FormLabel>
-                                <FormControl>
-                                    <Input type="number" placeholder="" {...field} />
-                                </FormControl>
-                            </FormItem>
-                        </div>
-                    )}
-                />
-                <FormField 
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                        <div className="mx-8 pb-4">
-                            <FormItem>
-                                <FormLabel className="text-lf-10 bold-18">Email:</FormLabel>
-                                <FormControl>
-                                    <Input type="email" placeholder="" {...field} />
-                                </FormControl>
-                            </FormItem>
-                        </div>
-                    )}
-                />
+                <div className="pt-4">
+                    <h2 className="bold-16 uppercase text-lf-10 text-center pb-2">Your information</h2>
+                </div>
+                <div className="border-2 border-lf-30 rounded-md mx-8 mb-4 bg-lf-80">
+                    <FormField 
+                        control={form.control}
+                        name="name"
+                        render={({ field }) => (
+                            <div className="mx-6 pb-2 pt-4">
+                                <FormItem>
+                                    <FormLabel className="text-lf-10 bold-18">Name:</FormLabel>
+                                    <FormControl>
+                                        <Input type="text" placeholder="" {...field} />
+                                    </FormControl>
+                                </FormItem>
+                            </div>
+                        )}
+                    />
+                    <FormField 
+                        control={form.control}
+                        name="phone"
+                        render={({ field }) => (
+                            <div className="mx-6 pb-2">
+                                <FormItem>
+                                    <FormLabel className="text-lf-10 bold-18">Phone:</FormLabel>
+                                    <FormControl>
+                                        <Input type="number" placeholder="" {...field} />
+                                    </FormControl>
+                                </FormItem>
+                            </div>
+                        )}
+                    />
+                    <FormField 
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                            <div className="mx-6 pb-4">
+                                <FormItem>
+                                    <FormLabel className="text-lf-10 bold-18">Email:</FormLabel>
+                                    <FormControl>
+                                        <Input type="email" placeholder="" {...field} />
+                                    </FormControl>
+                                </FormItem>
+                            </div>
+                        )}
+                    />
+                </div>
                 <div className="flex w-full">
                     <ThankYouModal onConfirm={()=>thankYouConfirmation()}>
                         <Button 
                             type="submit"
-                            className="capitalize w-full bg-red-800/90 px-8 mx-8 bold-20 text-slate-100 hover:bg-red-900/90"
+                            className="capitalize w-full bg-red-800/90 px-8 py-6 mx-8 bold-20 text-slate-100 hover:bg-red-900/90"
                         >submit feedback</Button>
                     </ThankYouModal>
                 </div>

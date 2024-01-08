@@ -32,8 +32,8 @@ export const ThankYouModal = ({
                         Your feedback helps us be our best!
                     </AlertDialogDescription>
                 </AlertDialogHeader>
-                <AlertDialogFooter>
-                    <AlertDialogAction onClick={onConfirm} className="bg-red-900">
+                <AlertDialogFooter className="flex items-center">
+                    <AlertDialogAction onClick={onConfirm} className="bg-red-900 w-[150px]">
                         Finish
                     </AlertDialogAction>
                 </AlertDialogFooter>
