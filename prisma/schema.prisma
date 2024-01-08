@@ -1,0 +1,32 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["fullTextSearch", "fullTextIndex"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model Feedback {
+  id String @id @default(uuid())
+  name String @db.Text
+  phone String @db.Text 
+  email String @db.Text
+  coachName String @db.Text
+  suggestions String @db.Text
+  firstTime Boolean
+  workoutRating Int
+  cleanlinessRating Int
+  recommendationRating Int
+  returnRating Int
+  coachRating Int
+  location String @db.Text
+
+  createdAt DateTime @default(now())
+  @@index([location])
+}
